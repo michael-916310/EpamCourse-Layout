@@ -1,0 +1,105 @@
+@import 'common.scss';
+
+
+
+.other-courses__header {
+  @extend %flex;
+  @include justify-content(center);
+  @include align-items(center);
+
+  height: 200px;
+
+  font-size: 35px;
+  color: $color-grey;
+}
+
+.other-courses__cards-outher-container {
+  padding: 0px 100px;
+}
+
+.other-courses__cards-inner-container{
+  @extend %flex;  
+  @include justify-content(space-between);
+  @extend %wrap;  
+}
+
+.other-courses__card{
+  box-sizing: border-box;
+  @extend %flex;
+  @include align-items(center);  
+  padding:0px 5px;
+
+  height: 130px;
+  width: 235px;
+
+  border-radius: 10px;
+
+  transition-property: width, height;
+}
+
+.other-courses__card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  transition-duration: 1s;  
+  width: 250px;
+  height: 150px;
+}
+
+.other-courses__card-image{
+  max-height: 70px;
+  max-width: 70px;
+
+}
+
+.other-courses__card-info-container{
+  @extend %flex;
+  @include align-items(center);
+}
+
+.other-courses__card-name{
+  font-size: 16px;
+  font-weight: bold;
+
+  color: $color-turquoise;  
+}
+
+.other-courses__card-duration{
+  color: $color-dark;
+}
+
+.other-courses-footer {
+  height: 70px;
+}
+
+@media (max-width: 1150px) {
+  .other-courses__card:hover {
+    width: 400px;
+    height: 150px;
+  }
+
+  .other-courses__card{
+    width: 375px;
+  }
+}
+
+@media (max-width: 960px) {
+  .other-courses__card:hover {
+     width: 300px;
+     height: 150px;
+   }
+
+  .other-courses__card{
+    width: 275px;
+  }
+
+  .other-courses__cards-inner-container {
+    @include justify-content(center);
+  }
+}
+
+@media (max-width: 500px) {
+
+  .other-courses__cards-outher-container {
+    padding: 50px;
+  }
+}

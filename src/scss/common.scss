@@ -1,0 +1,27 @@
+
+$color-turquoise: #39c2d7;
+$color-grey: rgb(119, 119, 119);
+$color-dark: #38383a;
+
+%flex{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;  
+}
+
+@mixin justify-content($how){
+  -webkit-box-pack: $how;
+  -ms-flex-pack: $how;
+  justify-content: $how;
+}
+
+@mixin align-items($how){
+  -webkit-box-align: $how;  
+  -ms-flex-align: $how;  
+  align-items: $how;
+}
+
+%wrap{
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;  
+}

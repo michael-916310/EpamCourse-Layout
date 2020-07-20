@@ -1,0 +1,112 @@
+.other-courses__header, .other-courses__cards-inner-container, .other-courses__card, .other-courses__card-info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.other-courses__cards-inner-container {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.other-courses__header {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 200px;
+  font-size: 35px;
+  color: #777777;
+}
+
+.other-courses__cards-outher-container {
+  padding: 0px 100px;
+}
+
+.other-courses__cards-inner-container {
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+}
+
+.other-courses__card {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 5px;
+  height: 130px;
+  width: 235px;
+  border-radius: 10px;
+  -webkit-transition-property: width, height;
+  transition-property: width, height;
+}
+
+.other-courses__card:hover {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  width: 250px;
+  height: 150px;
+}
+
+.other-courses__card-image {
+  max-height: 70px;
+  max-width: 70px;
+}
+
+.other-courses__card-info-container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.other-courses__card-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #39c2d7;
+}
+
+.other-courses__card-duration {
+  color: #38383a;
+}
+
+.other-courses-footer {
+  height: 70px;
+}
+
+@media (max-width: 1150px) {
+  .other-courses__card:hover {
+    width: 400px;
+    height: 150px;
+  }
+  .other-courses__card {
+    width: 375px;
+  }
+}
+
+@media (max-width: 960px) {
+  .other-courses__card:hover {
+    width: 300px;
+    height: 150px;
+  }
+  .other-courses__card {
+    width: 275px;
+  }
+  .other-courses__cards-inner-container {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .other-courses__cards-outher-container {
+    padding: 50px;
+  }
+}
+/*# sourceMappingURL=other-courses.css.map */

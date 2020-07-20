@@ -1,0 +1,118 @@
+
+@import 'common.scss'; 
+
+.about-caption{
+  @extend %flex;
+  @include justify-content(center);
+  @include align-items(center);
+
+  height: 160px;
+  font-size: 36px;
+  color: $color-grey;
+}
+
+.about-info-container{
+  box-sizing: border-box;
+  width: 100%;
+
+  padding: 0 100px;
+  background-color: rgb(251, 251, 251);
+}
+
+.about-info{
+  box-sizing: border-box;
+
+  @extend %flex;
+  @include justify-content(space-between);
+  @include align-items(center);
+  @extend %wrap;    
+
+  min-height: 235px;
+  width: 100%;
+}
+
+.about-info__panel{
+  box-sizing: border-box;
+
+  @extend %flex;
+  @include justify-content(center);
+  @include align-items(center);
+
+  color: $color-grey;
+
+  max-width: 235px;
+  height: 235px;
+  border-radius: 10px;
+
+
+  transition-property: width, height, color;
+  transition-duration: 1s;
+}
+
+.about-info__panel:hover {
+  color: $color-turquoise;
+  background-color: white;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  width: 250px;
+  height: 250px;
+}
+
+.about-info__panel:hover .about-info-button{
+  display: block;
+}
+
+.about-info__space{
+  width: 0px;
+  height: 130px;
+  border-left:1px solid rgb(228, 228, 228);
+}
+
+.about-info__panel-number{
+  font-size: 52px;
+  font-weight: bold;
+
+  @extend %flex;
+  @include justify-content(center);
+}
+
+.about-info__panel-unit{
+  @extend %flex;
+  @include justify-content(center);
+  
+  font-size: 16px;
+  padding:15px 0;
+}
+
+.about-info-button{
+  display: none;
+  border: none;
+  border-radius: 5px;
+  height: 38px;
+  width: 180px;
+
+  background-color: $color-turquoise;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .about-info__space {
+    display:none;
+  }
+
+  .about-info__panel{
+    width: 235px;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .about-info{
+    @include justify-content(center);
+  }
+
+  .about-info-container{
+    padding: 0px;
+  }
+}

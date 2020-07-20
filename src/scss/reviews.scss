@@ -1,0 +1,97 @@
+@import 'common.scss';
+
+.reviews {
+  box-sizing: border-box;
+
+  min-height: 735px;
+}
+
+.reviews__header{
+  @extend %flex;
+  @include justify-content(center);
+  @include align-items(center);
+
+  height: 140px;
+  font-size: 35px;
+  color: $color-grey;  
+}
+
+.reviews__cards-container {
+  box-sizing: border-box;
+
+  padding:0px 100px;
+  width: 100%;
+}
+
+.reviews__cards-inner-container {
+  box-sizing: border-box;
+
+  height: 440px;
+}
+
+.reviews__footer {
+  @extend %flex;
+  @include justify-content(center);
+  @include align-items(center);
+
+  height: 155px;
+  font-size: 14px;
+  font-weight: bold;
+  color: $color-turquoise;   
+}
+
+.reviews__row {
+  @extend %flex;
+  @include justify-content(space-between);
+  @extend %wrap;  
+
+  box-sizing: border-box;
+}
+
+.reviews__card {
+  box-sizing: border-box;
+  
+  //width: 490px;
+  width: 485px;
+  min-height: 210px;
+  margin-bottom: 10px;
+
+  line-height: 1.5;  
+  color: $color-grey;  
+}
+
+.reviews__card-img {
+  float:left;
+
+  width: 130px;
+  height: 130px;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+.reviews__card-author {
+  font-weight: bold;
+}
+
+@media (min-width: 1400px) {
+  .reviews__row {
+    @include justify-content(space-around);
+  }
+}
+
+@media (max-width: 1195px) {
+  .reviews__cards-inner-container {
+    height: auto;
+  }
+
+  .reviews__row {
+    @include justify-content(center);
+  }
+
+}
+
+@media (max-width: 690px) {
+  .reviews__cards-container {
+    padding:0px 20px;
+  }
+}

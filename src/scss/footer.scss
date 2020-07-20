@@ -1,0 +1,79 @@
+@import 'common.scss';
+
+.footer {
+  @extend %flex;
+  @extend %wrap;
+  @include justify-content(space-between);
+
+  box-sizing: border-box;
+  padding: 0px 100px;
+  width: 100%;
+
+  min-height: 325px;
+  background-color: $color-dark;
+  color: $color-grey;
+}
+
+.footer__left-panel {
+  width: 490px;
+}
+
+.footer__left-panel-header {
+  @extend %flex;
+  @include align-items(center);
+
+  height: 85px;
+  font-size: 20px;
+}
+
+.footer__left-panel-copyright {
+  height: 35px;
+}
+
+.footer__right-panel {
+  width: 490px;
+}
+
+.footer__right-panel-header {
+  @extend %flex;
+  @include align-items(center);
+
+  font-size: 18px;
+  font-weight: bold;
+  height: 85px;  
+}
+
+.footer__course-list-container {
+  @extend %flex;
+}
+
+.footer__course-list {
+  width: 235px;
+}
+
+.footer__course {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1400px) {
+  .footer {
+    @include justify-content(space-around);
+  }
+}
+
+@media (max-width: 1190px) {
+  .footer {  
+    @include justify-content(center);
+  }
+}
+
+@media (max-width: 690px) {
+  .footer {
+    padding: 0px 20px;
+  }
+
+  .footer__course-list-container {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;  
+  }  
+}
